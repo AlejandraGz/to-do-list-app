@@ -1,0 +1,29 @@
+mat-icon {
+  width: 46px;
+  cursor: pointer;
+}
+.listRow {
+  display: flex;
+  justify-content: space-between;
+}
+.container {
+  margin: 5% 20%;
+}
+.done {
+  color: #009347;
+  &:hover {
+    color: #026231;
+  }
+}
+.delete {
+  color: red;
+  &:hover {
+    color:rgb(142, 0, 0);
+  }
+}
+.edit {
+  color:#1c7dfc;
+  &:hover {
+    color: #0c448c;
+  }
+}

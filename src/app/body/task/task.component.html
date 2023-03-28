@@ -1,0 +1,14 @@
+<div class="container">
+  <mat-list role="list" *ngIf="listTareas.length > 0">
+    <div class="listRow" *ngFor="let tarea of listTareas">
+      <mat-list-item role="listitem" [ngClass]="{'none': !flag, 'decoration': flag}" >{{ tarea.task }}</mat-list-item>
+      <mat-icon class="done" (click)="checkTarea(tarea._id)">done</mat-icon>
+      <mat-icon class="delete" (click)="eliminarTarea(tarea._id)">delete</mat-icon>
+    </div>
+  </mat-list>
+  <span *ngIf="listTareas.length == 0">No hay tareas</span>
+  <mat-paginator #paginator (page)="handlePageEvent($event)" class="demo-paginator" [length]=100 [pageSize]=10
+    [disabled]=false [showFirstLastButtons]=true [pageSizeOptions]="[5, 10, 25, 100]" [hidePageSize]=false
+    [pageIndex]="pageIndex" aria-label="Select page">
+  </mat-paginator>
+</div>

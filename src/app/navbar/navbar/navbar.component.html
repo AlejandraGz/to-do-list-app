@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>ToDo List</span>
+    <div class="input-wrapper">
+      <form [formGroup]="taskForm">
+        <input class="input form-control" id="task" type="text" formControlName="task"
+          placeholder="Escriba una nueva tarea">
+        <mat-icon class="mat-18" aria-label="agregar tarea" (click)="sendTask();">add</mat-icon>
+      </form>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
